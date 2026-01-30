@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Footer from "./components/Footer";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [cart, setCart] = useState([]);
+  const [page, setPage] = useState("home"); // "home", "cart", "checkout"
+
+  // Add item to cart
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
+  // Remove item from cart by index
+  const removeFromCart = (index) => {
+    setCart(cart.filter((_, i) => i !== index));
+  };
+
+  // Navigation functions
+  const goHome = () => setPage("home");
+  const goCart = () => setPage("cart");
+  const goCheckout = () => setPage("checkout");
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="min-h-screen bg-gray-50">
+      {/* Navbar with navigation */}
+      <Navbar cartCount={cart.length} goHome={goHome} goCart={goCart} />
 
-export default App
+      {/* Pages */}
+      {page === "home" && <Home addToCart={addToCart} />}
+      {page === "cart" && (
+        <Cart
+          cart={cart}
+          removeFromCart={removeFromCart}
+          goCheckout={goCheckout} // pass checkout navigation
+        />
+      )}
+      {page === "checkout" && <Checkout cart={cart} />}
+
+      <Footer />
+    </div>
+  );
+}
