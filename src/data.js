@@ -3,57 +3,73 @@ const products = [
       id: 1,
       name: "Samsung Galaxy S23 Ultra",
       price: 150000,
-      image: "https://images.unsplash.com/photo-1611078488451-17f6b3c4c75c?auto=format&fit=crop&w=500&q=60",
-      description: "The latest Samsung flagship with incredible camera and battery life."
+      image:
+        "https://gadgetcentral.co.ke/wp-content/uploads/2023/02/01-DM3-PhantomBlack-PDP-1600x1200-1.webp",
+      description:
+        "The latest Samsung flagship with incredible camera and battery life.",
     },
     {
       id: 2,
       name: "Apple MacBook Pro 16",
       price: 300000,
-      image: "https://images.unsplash.com/photo-1587829741301-dc798b82b8c9?auto=format&fit=crop&w=500&q=60",
-      description: "Powerful MacBook for creative professionals and developers."
+      image:
+        "https://i.ebayimg.com/images/g/EGUAAOSwSWhjxdjA/s-l1200.jpg",
+      description:
+        "Powerful MacBook for creative professionals and developers.",
     },
     {
       id: 3,
       name: "Nike Air Max 270",
       price: 12000,
-      image: "https://images.unsplash.com/photo-1593032457863-3b1fc844d4ef?auto=format&fit=crop&w=500&q=60",
-      description: "Comfortable and stylish sneakers for everyday wear."
+      image:
+        "https://images-na.ssl-images-amazon.com/images/I/81d0FiKm6NL.jpg",
+      description:
+        "Comfortable and stylish sneakers for everyday wear.",
     },
     {
       id: 4,
       name: "Sony WH-1000XM4 Headphones",
       price: 35000,
-      image: "https://images.unsplash.com/photo-1606813901973-8a3cc5dbfd4e?auto=format&fit=crop&w=500&q=60",
-      description: "Noise cancelling over-ear headphones with long battery life."
+      image:
+        "https://cellularkenya.co.ke/wp-content/uploads/2022/05/sony-1000mx4.jpg",
+      description:
+        "Noise cancelling over-ear headphones with long battery life.",
     },
     {
       id: 5,
       name: "Canon EOS R6 Camera",
       price: 250000,
-      image: "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=500&q=60",
-      description: "Professional mirrorless camera for photography enthusiasts."
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyPH9CxaEVyzJNuMih4Gc12eYDDG6C2Vlljg&s",
+      description:
+        "Professional mirrorless camera for photography enthusiasts.",
     },
     {
       id: 6,
       name: "Adidas Sports Jacket",
       price: 8000,
-      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=500&q=60",
-      description: "Lightweight and stylish jacket for all seasons."
+      image:
+        "https://i.ebayimg.com/images/g/HpIAAOSwnGVgGurW/s-l1200.jpg",
+      description:
+        "Lightweight and stylish jacket for all seasons.",
     },
     {
       id: 7,
       name: "LG 55-inch OLED TV",
       price: 220000,
-      image: "https://images.unsplash.com/photo-1612831455545-1b4e5c00356e?auto=format&fit=crop&w=500&q=60",
-      description: "Ultra HD OLED TV with stunning colors and deep blacks."
+      image:
+        "https://avechi.co.ke/wp-content/uploads/2023/02/D0001.jpg",
+      description:
+        "Ultra HD OLED TV with stunning colors and deep blacks.",
     },
     {
       id: 8,
       name: "Apple iPhone 14 Pro",
       price: 140000,
-      image: "https://images.unsplash.com/photo-1635304357245-6e0bff2b70e8?auto=format&fit=crop&w=500&q=60",
-      description: "Powerful iPhone with excellent camera performance."
+      image:
+        "https://zurimall.co.ke/wp-content/uploads/2022/12/Artboard-1-copy@300x-100-53.jpg.webp",
+      description:
+        "Powerful iPhone with excellent camera performance.",
     },
   ];
   

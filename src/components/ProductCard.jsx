@@ -3,44 +3,44 @@ import { useState } from "react";
 export default function ProductCard({ product, addToCart }) {
   const [added, setAdded] = useState(false);
 
-  const handleAddToCart = () => {
+  const handleAdd = () => {
     addToCart(product);
     setAdded(true);
-
-    // reset button after 1.5s
-    setTimeout(() => {
-      setAdded(false);
-    }, 1500);
+    setTimeout(() => setAdded(false), 1200);
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition group">
-      <div className="overflow-hidden rounded-t-2xl">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="h-48 w-full object-cover group-hover:scale-105 transition"
-        />
-      </div>
+    <div className="relative rounded-2xl bg-white/70 backdrop-blur-xl border border-white/30 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+      
+      {/* Glass highlight */}
+      <div className="absolute inset-0 bg-linear-to-br from-white/25 to-transparent pointer-events-none" />
 
-      <div className="p-4">
-        <h3 className="text-sm font-medium text-gray-700 line-clamp-2">
+      {/* Image */}
+      <img
+        src={product.image}
+        alt={product.name}
+        className="h-48 w-full object-cover"
+      />
+
+      {/* Content */}
+      <div className="relative p-4">
+        <h3 className="font-semibold text-gray-800 line-clamp-2">
           {product.name}
         </h3>
 
-        <p className="mt-2 text-lg font-bold text-gray-900">
+        <p className="mt-2 text-lg font-extrabold text-gray-900">
           KSh {product.price.toLocaleString()}
         </p>
 
         <button
-          onClick={handleAddToCart}
-          disabled={added}
-          className={`mt-4 w-full py-2 rounded-lg text-sm font-semibold transition
+          onClick={handleAdd}
+          className={`mt-4 w-full py-2 rounded-xl font-semibold transition
             ${
               added
-                ? "bg-green-500 text-white cursor-default"
-                : "bg-gray-900 text-white hover:bg-gray-800"
-            }`}
+                ? "bg-pink-500 text-white"
+                : "bg-indigo-600 text-white hover:bg-indigo-700"
+            }
+          `}
         >
           {added ? "Added ✓" : "Add to Cart"}
         </button>
